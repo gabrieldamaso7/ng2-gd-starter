@@ -144,6 +144,14 @@ module.exports = function (options) {
           loader: 'file'
         },
 
+        /* File loader for SASS files.
+         */
+        {
+          test: /\.(sass|scss)$/,
+          exclude: /node_modules/,
+          loader: 'raw-loader!sass-loader'
+        },
+
       ],
 
     },
