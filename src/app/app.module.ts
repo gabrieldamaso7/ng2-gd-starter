@@ -14,10 +14,9 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
-import { XLarge } from './home/x-large';
+
+//containers
+import * as containers from './containers';
 
 //shared components
 import * as shared from './shared';
@@ -41,10 +40,10 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
-    HomeComponent,
-    NoContentComponent,
-    XLarge,
+    containers.AboutComponent,
+    containers.HomeComponent,
+    containers.NoContentComponent,
+    containers.XLarge,
     shared.Navbar
   ],
   imports: [ // import Angular's modules

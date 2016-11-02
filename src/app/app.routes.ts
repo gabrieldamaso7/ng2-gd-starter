@@ -1,20 +1,19 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
+
+import * as containers from './containers';
 
 import { DataResolver } from './app.resolver';
 
 
 export const ROUTES: Routes = [
-  { path: '',      component: HomeComponent },
-  { path: 'home',  component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: '',      component: containers.HomeComponent },
+  { path: 'home',  component: containers.HomeComponent },
+  { path: 'about', component: containers.AboutComponent },
   {
-    path: 'detail', loadChildren: () => System.import('./+detail').then((comp: any) => {
+    path: 'detail', loadChildren: () => System.import('./containers/+detail').then((comp: any) => {
       return comp.default;
     })
     ,
   },
-  { path: '**',    component: NoContentComponent },
+  { path: '**',    component: containers.NoContentComponent },
 ];
