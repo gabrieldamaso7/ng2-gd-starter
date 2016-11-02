@@ -111,6 +111,19 @@ angular2-webpack-starter/
  │   │   ├──app.spec.ts        * a simple test of components in app.ts
  │   │   ├──app.e2e.ts         * a simple end-to-end test for /
  │   │   └──app.ts             * App.ts: a simple version of our App component components
+ |   |   ├──containers/                   * containers: folder
+ │   │   |    ├──index.ts                 * import all containers
+ │   │   |    ├──home/                    * a simple component
+ │   │   |    |       ├──home.component.ts              * home container
+ │   │   |    |       ├──home.component.html            * container's view
+ │   │   |    |       ├──home.sass                      * container's styling
+ │   │   |    |       ├──home.component.spec.ts         * a simple test of component
+ │   │   |    |       ├──home.e2e.ts                    * a simple end-to-end test for /
+ |   |   ├──shared/                   * shared components: folder
+ │   │   |    ├──index.ts                 * import all components
+ │   │   |    ├──navbar/                    * a simple component
+ │   │   |    |       ├──navbar.component.ts              * navbar component
+ │   │   |    |       ├──navbar.component.html            * component's view
  │   │
  │   └──assets/                * static assets are served here
  │       ├──icon/              * our list of icons from www.favicon-generator.org
