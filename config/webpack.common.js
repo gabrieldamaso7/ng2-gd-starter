@@ -152,6 +152,13 @@ module.exports = function (options) {
           loader: 'raw-loader!sass-loader'
         },
 
+        /* File loader for icons.
+         */
+        {
+          test: /\.woff|\.woff2|\.svg|.eot|\.ttf/,
+          loader: 'file'
+        },
+
       ],
 
     },
